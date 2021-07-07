@@ -1,0 +1,161 @@
+\hypertarget{main_8c}{}\doxysection{C\+:/\+Users/mirot/\+Documents/\+M\+C\+U\+Xpresso\+I\+D\+E\+\_\+11.0.1\+\_\+2563/workspace/frdmkl25z\+\_\+driver\+\_\+examples\+\_\+lpsci\+\_\+polling/source/main.c File Reference}
+\label{main_8c}\index{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/main.c@{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/main.c}}
+
+
+Subor s funkcou main spustajucou cely program.  
+
+
+{\ttfamily \#include $<$help\+\_\+functions.\+h$>$}\newline
+{\ttfamily \#include $<$elevator.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a325819a8e492ac69542e8b31705af6e9}{data}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_ad3d251360187c7a3da1b8e5b482b8e9d}{startB}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a0a084c7f8049985090b5a6f14b8dff7e}{adr1}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a29d5cd0feaf009e702943f8224cd9fbd}{adr2}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_af13e629a2f79d14821c7b9246ef99e9f}{data\+Size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_ab737b9992427f6e30af5b3846d48b66d}{crc}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a23191936922cf0740cd72391a1f43041}{data\+Data}} \mbox{[}10\mbox{]}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{main_8c_a6b693652a1f907303f32adf685c21db9}{readed}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{main_8c_a627c93e32e4c770eb01834c59e466a9a}{is\+Moving}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{main_8c_ab48a2239b01b69915af065f1eca22a0f}{opened}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{main_8c_a3c250fb2c6792afafd0e8cb3880d672d}{up}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_ae4d6b68a29058b69e6b7fec3e264e0d1}{last\+Limit\+Switch}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a92ede5611b7f4ff11d8f8f66fc5fe059}{new\+Limit\+Switch}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_af769d61a2f95d35a60f9da9e95632da9}{current\+Floor}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a0a42ab4958acd8c38fe037f5d0682387}{next\+Floor\+Led}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subor s funkcou main spustajucou cely program. 
+
+Subor obsahuje main funkciu ktora inicializuje komunikaciu a spusti nekonecnu slucku. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funckia inicializuje vsetky komunikaciu a nastavi vytah na poschodie P. V nekonejnom while prebieha citanie sprav, ak je sprava uspresne precitana, zavola funkciu ktora urci co bude dalej nasledovat.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a0a084c7f8049985090b5a6f14b8dff7e}\label{main_8c_a0a084c7f8049985090b5a6f14b8dff7e}} 
+\index{main.c@{main.c}!adr1@{adr1}}
+\index{adr1@{adr1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{adr1}{adr1}}
+{\footnotesize\ttfamily uint8\+\_\+t adr1}
+
+\mbox{\Hypertarget{main_8c_a29d5cd0feaf009e702943f8224cd9fbd}\label{main_8c_a29d5cd0feaf009e702943f8224cd9fbd}} 
+\index{main.c@{main.c}!adr2@{adr2}}
+\index{adr2@{adr2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{adr2}{adr2}}
+{\footnotesize\ttfamily uint8\+\_\+t adr2}
+
+\mbox{\Hypertarget{main_8c_ab737b9992427f6e30af5b3846d48b66d}\label{main_8c_ab737b9992427f6e30af5b3846d48b66d}} 
+\index{main.c@{main.c}!crc@{crc}}
+\index{crc@{crc}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{crc}{crc}}
+{\footnotesize\ttfamily uint8\+\_\+t crc}
+
+\mbox{\Hypertarget{main_8c_af769d61a2f95d35a60f9da9e95632da9}\label{main_8c_af769d61a2f95d35a60f9da9e95632da9}} 
+\index{main.c@{main.c}!currentFloor@{currentFloor}}
+\index{currentFloor@{currentFloor}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{currentFloor}{currentFloor}}
+{\footnotesize\ttfamily uint8\+\_\+t current\+Floor}
+
+\mbox{\Hypertarget{main_8c_a325819a8e492ac69542e8b31705af6e9}\label{main_8c_a325819a8e492ac69542e8b31705af6e9}} 
+\index{main.c@{main.c}!data@{data}}
+\index{data@{data}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t data}
+
+\mbox{\Hypertarget{main_8c_a23191936922cf0740cd72391a1f43041}\label{main_8c_a23191936922cf0740cd72391a1f43041}} 
+\index{main.c@{main.c}!dataData@{dataData}}
+\index{dataData@{dataData}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{dataData}{dataData}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+Data\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{main_8c_af13e629a2f79d14821c7b9246ef99e9f}\label{main_8c_af13e629a2f79d14821c7b9246ef99e9f}} 
+\index{main.c@{main.c}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+Size}
+
+\mbox{\Hypertarget{main_8c_a627c93e32e4c770eb01834c59e466a9a}\label{main_8c_a627c93e32e4c770eb01834c59e466a9a}} 
+\index{main.c@{main.c}!isMoving@{isMoving}}
+\index{isMoving@{isMoving}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{isMoving}{isMoving}}
+{\footnotesize\ttfamily \+\_\+\+Bool is\+Moving}
+
+\mbox{\Hypertarget{main_8c_ae4d6b68a29058b69e6b7fec3e264e0d1}\label{main_8c_ae4d6b68a29058b69e6b7fec3e264e0d1}} 
+\index{main.c@{main.c}!lastLimitSwitch@{lastLimitSwitch}}
+\index{lastLimitSwitch@{lastLimitSwitch}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{lastLimitSwitch}{lastLimitSwitch}}
+{\footnotesize\ttfamily uint8\+\_\+t last\+Limit\+Switch}
+
+\mbox{\Hypertarget{main_8c_a92ede5611b7f4ff11d8f8f66fc5fe059}\label{main_8c_a92ede5611b7f4ff11d8f8f66fc5fe059}} 
+\index{main.c@{main.c}!newLimitSwitch@{newLimitSwitch}}
+\index{newLimitSwitch@{newLimitSwitch}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{newLimitSwitch}{newLimitSwitch}}
+{\footnotesize\ttfamily uint8\+\_\+t new\+Limit\+Switch}
+
+\mbox{\Hypertarget{main_8c_a0a42ab4958acd8c38fe037f5d0682387}\label{main_8c_a0a42ab4958acd8c38fe037f5d0682387}} 
+\index{main.c@{main.c}!nextFloorLed@{nextFloorLed}}
+\index{nextFloorLed@{nextFloorLed}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{nextFloorLed}{nextFloorLed}}
+{\footnotesize\ttfamily uint8\+\_\+t next\+Floor\+Led}
+
+\mbox{\Hypertarget{main_8c_ab48a2239b01b69915af065f1eca22a0f}\label{main_8c_ab48a2239b01b69915af065f1eca22a0f}} 
+\index{main.c@{main.c}!opened@{opened}}
+\index{opened@{opened}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{opened}{opened}}
+{\footnotesize\ttfamily \+\_\+\+Bool opened}
+
+\mbox{\Hypertarget{main_8c_a6b693652a1f907303f32adf685c21db9}\label{main_8c_a6b693652a1f907303f32adf685c21db9}} 
+\index{main.c@{main.c}!readed@{readed}}
+\index{readed@{readed}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{readed}{readed}}
+{\footnotesize\ttfamily \+\_\+\+Bool readed}
+
+\mbox{\Hypertarget{main_8c_ad3d251360187c7a3da1b8e5b482b8e9d}\label{main_8c_ad3d251360187c7a3da1b8e5b482b8e9d}} 
+\index{main.c@{main.c}!startB@{startB}}
+\index{startB@{startB}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{startB}{startB}}
+{\footnotesize\ttfamily uint8\+\_\+t startB}
+
+\mbox{\Hypertarget{main_8c_a3c250fb2c6792afafd0e8cb3880d672d}\label{main_8c_a3c250fb2c6792afafd0e8cb3880d672d}} 
+\index{main.c@{main.c}!up@{up}}
+\index{up@{up}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily \+\_\+\+Bool up}
+

@@ -1,0 +1,175 @@
+\hypertarget{elevator_8c}{}\doxysection{C\+:/\+Users/mirot/\+Documents/\+M\+C\+U\+Xpresso\+I\+D\+E\+\_\+11.0.1\+\_\+2563/workspace/frdmkl25z\+\_\+driver\+\_\+examples\+\_\+lpsci\+\_\+polling/source/elevator.c File Reference}
+\label{elevator_8c}\index{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/elevator.c@{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/elevator.c}}
+
+
+Subor pre funkcie priamo suvisiace s vytahom.  
+
+
+{\ttfamily \#include \char`\"{}elevator.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{elevator_8c_a136c4f43a14a2dbf7bf66ef1e7b4c675}{read\+Msg}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8c_ab273ffa1b99365c5fd65d9f3a63248a6}{close\+Doors}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8c_a1a9607c416e5e77249f2bb5e1b31ea8b}{open\+Doors}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8c_a723bd559f244affc5fd973a9402c4924}{get\+Current\+Floor}} (uint8\+\_\+t direction)
+\item 
+void \mbox{\hyperlink{elevator_8c_ac92ebc93dd2ccfdff13beb82a4a9ef19}{get\+Next\+Floor\+L\+ED}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8c_a1cd2b5da6b72f6aeaceb517dade11ab9}{L\+ED}} (uint8\+\_\+t led, uint8\+\_\+t on\+Off)
+\item 
+void \mbox{\hyperlink{elevator_8c_ac1d276b5f0f6871af89be8ddf312cb37}{start\+Moving}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8c_aacf6bf8e121fea8b0a92d7197b73fe27}{stop}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8c_af59c62ac913a7e9a3ead5f189520972b}{def\+State}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8c_a3d67752672de1fee557a36318e762fa2}{choose\+Action}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subor pre funkcie priamo suvisiace s vytahom. 
+
+Obsahuje funkcie pre citanie sprav, ovladanie dveri, motoru, L\+E\+Diek, a zistavanie polohy vytahu. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{elevator_8c_a3d67752672de1fee557a36318e762fa2}\label{elevator_8c_a3d67752672de1fee557a36318e762fa2}} 
+\index{elevator.c@{elevator.c}!chooseAction@{chooseAction}}
+\index{chooseAction@{chooseAction}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{chooseAction()}{chooseAction()}}
+{\footnotesize\ttfamily void choose\+Action (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funckia na zaklade toho ci je vytah v pohybe vyberie akciu ktora ma nasledovat. Nasledne otvori dvere. 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8c_ab273ffa1b99365c5fd65d9f3a63248a6}\label{elevator_8c_ab273ffa1b99365c5fd65d9f3a63248a6}} 
+\index{elevator.c@{elevator.c}!closeDoors@{closeDoors}}
+\index{closeDoors@{closeDoors}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{closeDoors()}{closeDoors()}}
+{\footnotesize\ttfamily void close\+Doors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia ktora zatvori na vytahu dvere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8c_af59c62ac913a7e9a3ead5f189520972b}\label{elevator_8c_af59c62ac913a7e9a3ead5f189520972b}} 
+\index{elevator.c@{elevator.c}!defState@{defState}}
+\index{defState@{defState}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{defState()}{defState()}}
+{\footnotesize\ttfamily void def\+State (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funckia zatvori dvere vytahu, rozdehne ho smerom dole a zastavi na poschodí P. Nasledne otvori dvere. 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8c_a723bd559f244affc5fd973a9402c4924}\label{elevator_8c_a723bd559f244affc5fd973a9402c4924}} 
+\index{elevator.c@{elevator.c}!getCurrentFloor@{getCurrentFloor}}
+\index{getCurrentFloor@{getCurrentFloor}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{getCurrentFloor()}{getCurrentFloor()}}
+{\footnotesize\ttfamily void get\+Current\+Floor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{direction }\end{DoxyParamCaption})}
+
+Funkcia ktora posiela na displej spravy so smerom pohybu vytahu a s jeho aktualnou polohou.
+
+
+\begin{DoxyParams}{Parameters}
+{\em smer} & pohybu vytahu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{elevator_8c_ac92ebc93dd2ccfdff13beb82a4a9ef19}\label{elevator_8c_ac92ebc93dd2ccfdff13beb82a4a9ef19}} 
+\index{elevator.c@{elevator.c}!getNextFloorLED@{getNextFloorLED}}
+\index{getNextFloorLED@{getNextFloorLED}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{getNextFloorLED()}{getNextFloorLED()}}
+{\footnotesize\ttfamily void get\+Next\+Floor\+L\+ED (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia zistujuca adresu L\+ED pri stlacenom tlacidle a nasledujucu polohu vytahu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8c_a1cd2b5da6b72f6aeaceb517dade11ab9}\label{elevator_8c_a1cd2b5da6b72f6aeaceb517dade11ab9}} 
+\index{elevator.c@{elevator.c}!LED@{LED}}
+\index{LED@{LED}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{LED()}{LED()}}
+{\footnotesize\ttfamily void L\+ED (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{led,  }\item[{uint8\+\_\+t}]{on\+Off }\end{DoxyParamCaption})}
+
+Funkcia ktora ktora sluzi na rozsvecovanie a zhasinanie L\+E\+D-\/iek.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adresa} & led \\
+\hline
+{\em zapnutie} & alebo vypnutie led \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{elevator_8c_a1a9607c416e5e77249f2bb5e1b31ea8b}\label{elevator_8c_a1a9607c416e5e77249f2bb5e1b31ea8b}} 
+\index{elevator.c@{elevator.c}!openDoors@{openDoors}}
+\index{openDoors@{openDoors}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{openDoors()}{openDoors()}}
+{\footnotesize\ttfamily void open\+Doors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia ktora otvori na vytahu dvere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8c_a136c4f43a14a2dbf7bf66ef1e7b4c675}\label{elevator_8c_a136c4f43a14a2dbf7bf66ef1e7b4c675}} 
+\index{elevator.c@{elevator.c}!readMsg@{readMsg}}
+\index{readMsg@{readMsg}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{readMsg()}{readMsg()}}
+{\footnotesize\ttfamily void read\+Msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia sluziaca na citanie sprav. Spravu cita po bajtoch, kazdy si ulozi do zodpovedajucej premennej. Ak spravu poslal limit switch, ulozi si ho aby poznal poslednu polohu vytahu. Po uspesnom precitani spravy odosle A\+CK.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+get last limit switch
+
+send A\+CK\mbox{\Hypertarget{elevator_8c_ac1d276b5f0f6871af89be8ddf312cb37}\label{elevator_8c_ac1d276b5f0f6871af89be8ddf312cb37}} 
+\index{elevator.c@{elevator.c}!startMoving@{startMoving}}
+\index{startMoving@{startMoving}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{startMoving()}{startMoving()}}
+{\footnotesize\ttfamily void start\+Moving (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia ktora uvedie vytah do pohybu smerom hore alebo dole, pripadne len zavrie a otvori dvere ak bolo stlacene tlacidlo poschodia na ktorom sa nachadza.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8c_aacf6bf8e121fea8b0a92d7197b73fe27}\label{elevator_8c_aacf6bf8e121fea8b0a92d7197b73fe27}} 
+\index{elevator.c@{elevator.c}!stop@{stop}}
+\index{stop@{stop}!elevator.c@{elevator.c}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funckia cita spravy od vytahu pokial nepride na tu, ktora udava pozadovvanu polohu vytahu. Nasledne nastavi vytahu mensiu rychlost a potom ho uplne zastavi. Nakoniec otvori dvere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}

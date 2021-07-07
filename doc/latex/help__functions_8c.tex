@@ -1,0 +1,74 @@
+\hypertarget{help__functions_8c}{}\doxysection{C\+:/\+Users/mirot/\+Documents/\+M\+C\+U\+Xpresso\+I\+D\+E\+\_\+11.0.1\+\_\+2563/workspace/frdmkl25z\+\_\+driver\+\_\+examples\+\_\+lpsci\+\_\+polling/source/help\+\_\+functions.c File Reference}
+\label{help__functions_8c}\index{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/help\_functions.c@{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/help\_functions.c}}
+
+
+Subor ktory obsahuje pomocne funkcie.  
+
+
+{\ttfamily \#include \char`\"{}help\+\_\+functions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{help__functions_8c_ae4957ea7c20060dce20f990a9b8ecbcb}{delay}} (int milli\+\_\+seconds)
+\item 
+unsigned char \mbox{\hyperlink{help__functions_8c_ac8a19719c0e9993dd505a797e2f750fb}{dallas\+\_\+crc8}} (const unsigned char $\ast$\mbox{\hyperlink{main_8c_a325819a8e492ac69542e8b31705af6e9}{data}}, const unsigned int size)
+\item 
+void \mbox{\hyperlink{help__functions_8c_affd6460c58301cd0a5e45abbfd1ad04b}{print\+Data}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subor ktory obsahuje pomocne funkcie. 
+
+Nachadzaju sa tu metody na cakanie, vypocet kontrolneho suctu a vypisanie dat. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{help__functions_8c_ac8a19719c0e9993dd505a797e2f750fb}\label{help__functions_8c_ac8a19719c0e9993dd505a797e2f750fb}} 
+\index{help\_functions.c@{help\_functions.c}!dallas\_crc8@{dallas\_crc8}}
+\index{dallas\_crc8@{dallas\_crc8}!help\_functions.c@{help\_functions.c}}
+\doxysubsubsection{\texorpdfstring{dallas\_crc8()}{dallas\_crc8()}}
+{\footnotesize\ttfamily unsigned char dallas\+\_\+crc8 (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{const unsigned int}]{size }\end{DoxyParamCaption})}
+
+Funkcia ktora vypocita C\+R\+C8 maxim.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+crc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{help__functions_8c_ae4957ea7c20060dce20f990a9b8ecbcb}\label{help__functions_8c_ae4957ea7c20060dce20f990a9b8ecbcb}} 
+\index{help\_functions.c@{help\_functions.c}!delay@{delay}}
+\index{delay@{delay}!help\_functions.c@{help\_functions.c}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{int}]{milli\+\_\+seconds }\end{DoxyParamCaption})}
+
+Funkcia ktora caka zadany pocet milisekund.
+
+
+\begin{DoxyParams}{Parameters}
+{\em milli\+\_\+seconds} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Storing start time
+
+looping till required time is not achieved\mbox{\Hypertarget{help__functions_8c_affd6460c58301cd0a5e45abbfd1ad04b}\label{help__functions_8c_affd6460c58301cd0a5e45abbfd1ad04b}} 
+\index{help\_functions.c@{help\_functions.c}!printData@{printData}}
+\index{printData@{printData}!help\_functions.c@{help\_functions.c}}
+\doxysubsubsection{\texorpdfstring{printData()}{printData()}}
+{\footnotesize\ttfamily void print\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia na vypisanie dat.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}

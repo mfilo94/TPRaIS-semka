@@ -1,0 +1,303 @@
+\hypertarget{elevator_8h}{}\doxysection{C\+:/\+Users/mirot/\+Documents/\+M\+C\+U\+Xpresso\+I\+D\+E\+\_\+11.0.1\+\_\+2563/workspace/frdmkl25z\+\_\+driver\+\_\+examples\+\_\+lpsci\+\_\+polling/source/elevator.h File Reference}
+\label{elevator_8h}\index{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/elevator.h@{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/elevator.h}}
+
+
+Obsahuje hlavicky funkcii v \mbox{\hyperlink{elevator_8c}{elevator.\+c}}.  
+
+
+{\ttfamily \#include $<$important.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{elevator_8h_a136c4f43a14a2dbf7bf66ef1e7b4c675}{read\+Msg}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8h_ab273ffa1b99365c5fd65d9f3a63248a6}{close\+Doors}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8h_a1a9607c416e5e77249f2bb5e1b31ea8b}{open\+Doors}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8h_a723bd559f244affc5fd973a9402c4924}{get\+Current\+Floor}} (uint8\+\_\+t direction)
+\item 
+void \mbox{\hyperlink{elevator_8h_ac92ebc93dd2ccfdff13beb82a4a9ef19}{get\+Next\+Floor\+L\+ED}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8h_a1cd2b5da6b72f6aeaceb517dade11ab9}{L\+ED}} (uint8\+\_\+t led, uint8\+\_\+t on\+Off)
+\item 
+void \mbox{\hyperlink{elevator_8h_ac1d276b5f0f6871af89be8ddf312cb37}{start\+Moving}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8h_aacf6bf8e121fea8b0a92d7197b73fe27}{stop}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8h_af59c62ac913a7e9a3ead5f189520972b}{def\+State}} (void)
+\item 
+void \mbox{\hyperlink{elevator_8h_a3d67752672de1fee557a36318e762fa2}{choose\+Action}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_a23191936922cf0740cd72391a1f43041}{data\+Data}} \mbox{[}10\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_a325819a8e492ac69542e8b31705af6e9}{data}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_ad3d251360187c7a3da1b8e5b482b8e9d}{startB}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_a0a084c7f8049985090b5a6f14b8dff7e}{adr1}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_a29d5cd0feaf009e702943f8224cd9fbd}{adr2}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_af13e629a2f79d14821c7b9246ef99e9f}{data\+Size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_ab737b9992427f6e30af5b3846d48b66d}{crc}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_ae4d6b68a29058b69e6b7fec3e264e0d1}{last\+Limit\+Switch}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_a92ede5611b7f4ff11d8f8f66fc5fe059}{new\+Limit\+Switch}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_af769d61a2f95d35a60f9da9e95632da9}{current\+Floor}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{elevator_8h_a0a42ab4958acd8c38fe037f5d0682387}{next\+Floor\+Led}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{elevator_8h_a6b693652a1f907303f32adf685c21db9}{readed}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{elevator_8h_a627c93e32e4c770eb01834c59e466a9a}{is\+Moving}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{elevator_8h_ab48a2239b01b69915af065f1eca22a0f}{opened}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{elevator_8h_a3c250fb2c6792afafd0e8cb3880d672d}{up}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Obsahuje hlavicky funkcii v \mbox{\hyperlink{elevator_8c}{elevator.\+c}}. 
+
+Subor obsahuje hlavicky a deklaracie premennych. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{elevator_8h_a3d67752672de1fee557a36318e762fa2}\label{elevator_8h_a3d67752672de1fee557a36318e762fa2}} 
+\index{elevator.h@{elevator.h}!chooseAction@{chooseAction}}
+\index{chooseAction@{chooseAction}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{chooseAction()}{chooseAction()}}
+{\footnotesize\ttfamily void choose\+Action (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funckia na zaklade toho ci je vytah v pohybe vyberie akciu ktora ma nasledovat. Nasledne otvori dvere. 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8h_ab273ffa1b99365c5fd65d9f3a63248a6}\label{elevator_8h_ab273ffa1b99365c5fd65d9f3a63248a6}} 
+\index{elevator.h@{elevator.h}!closeDoors@{closeDoors}}
+\index{closeDoors@{closeDoors}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{closeDoors()}{closeDoors()}}
+{\footnotesize\ttfamily void close\+Doors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia ktora zatvori na vytahu dvere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8h_af59c62ac913a7e9a3ead5f189520972b}\label{elevator_8h_af59c62ac913a7e9a3ead5f189520972b}} 
+\index{elevator.h@{elevator.h}!defState@{defState}}
+\index{defState@{defState}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{defState()}{defState()}}
+{\footnotesize\ttfamily void def\+State (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funckia zatvori dvere vytahu, rozdehne ho smerom dole a zastavi na poschodí P. Nasledne otvori dvere. 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8h_a723bd559f244affc5fd973a9402c4924}\label{elevator_8h_a723bd559f244affc5fd973a9402c4924}} 
+\index{elevator.h@{elevator.h}!getCurrentFloor@{getCurrentFloor}}
+\index{getCurrentFloor@{getCurrentFloor}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{getCurrentFloor()}{getCurrentFloor()}}
+{\footnotesize\ttfamily void get\+Current\+Floor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{direction }\end{DoxyParamCaption})}
+
+Funkcia ktora posiela na displej spravy so smerom pohybu vytahu a s jeho aktualnou polohou.
+
+
+\begin{DoxyParams}{Parameters}
+{\em smer} & pohybu vytahu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{elevator_8h_ac92ebc93dd2ccfdff13beb82a4a9ef19}\label{elevator_8h_ac92ebc93dd2ccfdff13beb82a4a9ef19}} 
+\index{elevator.h@{elevator.h}!getNextFloorLED@{getNextFloorLED}}
+\index{getNextFloorLED@{getNextFloorLED}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{getNextFloorLED()}{getNextFloorLED()}}
+{\footnotesize\ttfamily void get\+Next\+Floor\+L\+ED (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia zistujuca adresu L\+ED pri stlacenom tlacidle a nasledujucu polohu vytahu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8h_a1cd2b5da6b72f6aeaceb517dade11ab9}\label{elevator_8h_a1cd2b5da6b72f6aeaceb517dade11ab9}} 
+\index{elevator.h@{elevator.h}!LED@{LED}}
+\index{LED@{LED}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{LED()}{LED()}}
+{\footnotesize\ttfamily void L\+ED (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{led,  }\item[{uint8\+\_\+t}]{on\+Off }\end{DoxyParamCaption})}
+
+Funkcia ktora ktora sluzi na rozsvecovanie a zhasinanie L\+E\+D-\/iek.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adresa} & led \\
+\hline
+{\em zapnutie} & alebo vypnutie led \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{elevator_8h_a1a9607c416e5e77249f2bb5e1b31ea8b}\label{elevator_8h_a1a9607c416e5e77249f2bb5e1b31ea8b}} 
+\index{elevator.h@{elevator.h}!openDoors@{openDoors}}
+\index{openDoors@{openDoors}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{openDoors()}{openDoors()}}
+{\footnotesize\ttfamily void open\+Doors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia ktora otvori na vytahu dvere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8h_a136c4f43a14a2dbf7bf66ef1e7b4c675}\label{elevator_8h_a136c4f43a14a2dbf7bf66ef1e7b4c675}} 
+\index{elevator.h@{elevator.h}!readMsg@{readMsg}}
+\index{readMsg@{readMsg}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{readMsg()}{readMsg()}}
+{\footnotesize\ttfamily void read\+Msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Hlavicky funkcii
+
+Funkcia sluziaca na citanie sprav. Spravu cita po bajtoch, kazdy si ulozi do zodpovedajucej premennej. Ak spravu poslal limit switch, ulozi si ho aby poznal poslednu polohu vytahu. Po uspesnom precitani spravy odosle A\+CK.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+get last limit switch
+
+send A\+CK\mbox{\Hypertarget{elevator_8h_ac1d276b5f0f6871af89be8ddf312cb37}\label{elevator_8h_ac1d276b5f0f6871af89be8ddf312cb37}} 
+\index{elevator.h@{elevator.h}!startMoving@{startMoving}}
+\index{startMoving@{startMoving}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{startMoving()}{startMoving()}}
+{\footnotesize\ttfamily void start\+Moving (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia ktora uvedie vytah do pohybu smerom hore alebo dole, pripadne len zavrie a otvori dvere ak bolo stlacene tlacidlo poschodia na ktorom sa nachadza.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{elevator_8h_aacf6bf8e121fea8b0a92d7197b73fe27}\label{elevator_8h_aacf6bf8e121fea8b0a92d7197b73fe27}} 
+\index{elevator.h@{elevator.h}!stop@{stop}}
+\index{stop@{stop}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funckia cita spravy od vytahu pokial nepride na tu, ktora udava pozadovvanu polohu vytahu. Nasledne nastavi vytahu mensiu rychlost a potom ho uplne zastavi. Nakoniec otvori dvere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{elevator_8h_a0a084c7f8049985090b5a6f14b8dff7e}\label{elevator_8h_a0a084c7f8049985090b5a6f14b8dff7e}} 
+\index{elevator.h@{elevator.h}!adr1@{adr1}}
+\index{adr1@{adr1}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{adr1}{adr1}}
+{\footnotesize\ttfamily uint8\+\_\+t adr1}
+
+\mbox{\Hypertarget{elevator_8h_a29d5cd0feaf009e702943f8224cd9fbd}\label{elevator_8h_a29d5cd0feaf009e702943f8224cd9fbd}} 
+\index{elevator.h@{elevator.h}!adr2@{adr2}}
+\index{adr2@{adr2}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{adr2}{adr2}}
+{\footnotesize\ttfamily uint8\+\_\+t adr2}
+
+\mbox{\Hypertarget{elevator_8h_ab737b9992427f6e30af5b3846d48b66d}\label{elevator_8h_ab737b9992427f6e30af5b3846d48b66d}} 
+\index{elevator.h@{elevator.h}!crc@{crc}}
+\index{crc@{crc}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{crc}{crc}}
+{\footnotesize\ttfamily uint8\+\_\+t crc}
+
+\mbox{\Hypertarget{elevator_8h_af769d61a2f95d35a60f9da9e95632da9}\label{elevator_8h_af769d61a2f95d35a60f9da9e95632da9}} 
+\index{elevator.h@{elevator.h}!currentFloor@{currentFloor}}
+\index{currentFloor@{currentFloor}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{currentFloor}{currentFloor}}
+{\footnotesize\ttfamily uint8\+\_\+t current\+Floor}
+
+\mbox{\Hypertarget{elevator_8h_a325819a8e492ac69542e8b31705af6e9}\label{elevator_8h_a325819a8e492ac69542e8b31705af6e9}} 
+\index{elevator.h@{elevator.h}!data@{data}}
+\index{data@{data}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t data}
+
+\mbox{\Hypertarget{elevator_8h_a23191936922cf0740cd72391a1f43041}\label{elevator_8h_a23191936922cf0740cd72391a1f43041}} 
+\index{elevator.h@{elevator.h}!dataData@{dataData}}
+\index{dataData@{dataData}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{dataData}{dataData}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+Data\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{elevator_8h_af13e629a2f79d14821c7b9246ef99e9f}\label{elevator_8h_af13e629a2f79d14821c7b9246ef99e9f}} 
+\index{elevator.h@{elevator.h}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+Size}
+
+\mbox{\Hypertarget{elevator_8h_a627c93e32e4c770eb01834c59e466a9a}\label{elevator_8h_a627c93e32e4c770eb01834c59e466a9a}} 
+\index{elevator.h@{elevator.h}!isMoving@{isMoving}}
+\index{isMoving@{isMoving}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{isMoving}{isMoving}}
+{\footnotesize\ttfamily \+\_\+\+Bool is\+Moving}
+
+\mbox{\Hypertarget{elevator_8h_ae4d6b68a29058b69e6b7fec3e264e0d1}\label{elevator_8h_ae4d6b68a29058b69e6b7fec3e264e0d1}} 
+\index{elevator.h@{elevator.h}!lastLimitSwitch@{lastLimitSwitch}}
+\index{lastLimitSwitch@{lastLimitSwitch}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{lastLimitSwitch}{lastLimitSwitch}}
+{\footnotesize\ttfamily uint8\+\_\+t last\+Limit\+Switch}
+
+\mbox{\Hypertarget{elevator_8h_a92ede5611b7f4ff11d8f8f66fc5fe059}\label{elevator_8h_a92ede5611b7f4ff11d8f8f66fc5fe059}} 
+\index{elevator.h@{elevator.h}!newLimitSwitch@{newLimitSwitch}}
+\index{newLimitSwitch@{newLimitSwitch}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{newLimitSwitch}{newLimitSwitch}}
+{\footnotesize\ttfamily uint8\+\_\+t new\+Limit\+Switch}
+
+\mbox{\Hypertarget{elevator_8h_a0a42ab4958acd8c38fe037f5d0682387}\label{elevator_8h_a0a42ab4958acd8c38fe037f5d0682387}} 
+\index{elevator.h@{elevator.h}!nextFloorLed@{nextFloorLed}}
+\index{nextFloorLed@{nextFloorLed}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{nextFloorLed}{nextFloorLed}}
+{\footnotesize\ttfamily uint8\+\_\+t next\+Floor\+Led}
+
+\mbox{\Hypertarget{elevator_8h_ab48a2239b01b69915af065f1eca22a0f}\label{elevator_8h_ab48a2239b01b69915af065f1eca22a0f}} 
+\index{elevator.h@{elevator.h}!opened@{opened}}
+\index{opened@{opened}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{opened}{opened}}
+{\footnotesize\ttfamily \+\_\+\+Bool opened}
+
+\mbox{\Hypertarget{elevator_8h_a6b693652a1f907303f32adf685c21db9}\label{elevator_8h_a6b693652a1f907303f32adf685c21db9}} 
+\index{elevator.h@{elevator.h}!readed@{readed}}
+\index{readed@{readed}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{readed}{readed}}
+{\footnotesize\ttfamily \+\_\+\+Bool readed}
+
+\mbox{\Hypertarget{elevator_8h_ad3d251360187c7a3da1b8e5b482b8e9d}\label{elevator_8h_ad3d251360187c7a3da1b8e5b482b8e9d}} 
+\index{elevator.h@{elevator.h}!startB@{startB}}
+\index{startB@{startB}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{startB}{startB}}
+{\footnotesize\ttfamily uint8\+\_\+t startB}
+
+\mbox{\Hypertarget{elevator_8h_a3c250fb2c6792afafd0e8cb3880d672d}\label{elevator_8h_a3c250fb2c6792afafd0e8cb3880d672d}} 
+\index{elevator.h@{elevator.h}!up@{up}}
+\index{up@{up}!elevator.h@{elevator.h}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily \+\_\+\+Bool up}
+

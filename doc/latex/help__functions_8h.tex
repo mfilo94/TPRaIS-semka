@@ -1,0 +1,146 @@
+\hypertarget{help__functions_8h}{}\doxysection{C\+:/\+Users/mirot/\+Documents/\+M\+C\+U\+Xpresso\+I\+D\+E\+\_\+11.0.1\+\_\+2563/workspace/frdmkl25z\+\_\+driver\+\_\+examples\+\_\+lpsci\+\_\+polling/source/help\+\_\+functions.h File Reference}
+\label{help__functions_8h}\index{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/help\_functions.h@{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/help\_functions.h}}
+
+
+Obsahuje hlavicky funkcii definovanych v \mbox{\hyperlink{help__functions_8c}{help\+\_\+functions.\+c}}.  
+
+
+{\ttfamily \#include $<$important.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{help__functions_8h_ae4957ea7c20060dce20f990a9b8ecbcb}{delay}} (int milli\+\_\+seconds)
+\item 
+unsigned char \mbox{\hyperlink{help__functions_8h_ac8a19719c0e9993dd505a797e2f750fb}{dallas\+\_\+crc8}} (const unsigned char $\ast$\mbox{\hyperlink{main_8c_a325819a8e492ac69542e8b31705af6e9}{data}}, const unsigned int size)
+\item 
+void \mbox{\hyperlink{help__functions_8h_affd6460c58301cd0a5e45abbfd1ad04b}{print\+Data}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{help__functions_8h_a23191936922cf0740cd72391a1f43041}{data\+Data}} \mbox{[}10\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{help__functions_8h_a325819a8e492ac69542e8b31705af6e9}{data}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{help__functions_8h_ad3d251360187c7a3da1b8e5b482b8e9d}{startB}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{help__functions_8h_a0a084c7f8049985090b5a6f14b8dff7e}{adr1}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{help__functions_8h_a29d5cd0feaf009e702943f8224cd9fbd}{adr2}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{help__functions_8h_af13e629a2f79d14821c7b9246ef99e9f}{data\+Size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{help__functions_8h_ab737b9992427f6e30af5b3846d48b66d}{crc}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{help__functions_8h_a6b693652a1f907303f32adf685c21db9}{readed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Obsahuje hlavicky funkcii definovanych v \mbox{\hyperlink{help__functions_8c}{help\+\_\+functions.\+c}}. 
+
+Subor obsahuje hlavicky a deklaracie premennych. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{help__functions_8h_ac8a19719c0e9993dd505a797e2f750fb}\label{help__functions_8h_ac8a19719c0e9993dd505a797e2f750fb}} 
+\index{help\_functions.h@{help\_functions.h}!dallas\_crc8@{dallas\_crc8}}
+\index{dallas\_crc8@{dallas\_crc8}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{dallas\_crc8()}{dallas\_crc8()}}
+{\footnotesize\ttfamily unsigned char dallas\+\_\+crc8 (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{const unsigned int}]{size }\end{DoxyParamCaption})}
+
+Funkcia ktora vypocita C\+R\+C8 maxim.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+crc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{help__functions_8h_ae4957ea7c20060dce20f990a9b8ecbcb}\label{help__functions_8h_ae4957ea7c20060dce20f990a9b8ecbcb}} 
+\index{help\_functions.h@{help\_functions.h}!delay@{delay}}
+\index{delay@{delay}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{int}]{milli\+\_\+seconds }\end{DoxyParamCaption})}
+
+Hlavicky funkcii
+
+Funkcia ktora caka zadany pocet milisekund.
+
+
+\begin{DoxyParams}{Parameters}
+{\em milli\+\_\+seconds} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Storing start time
+
+looping till required time is not achieved\mbox{\Hypertarget{help__functions_8h_affd6460c58301cd0a5e45abbfd1ad04b}\label{help__functions_8h_affd6460c58301cd0a5e45abbfd1ad04b}} 
+\index{help\_functions.h@{help\_functions.h}!printData@{printData}}
+\index{printData@{printData}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{printData()}{printData()}}
+{\footnotesize\ttfamily void print\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia na vypisanie dat.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{help__functions_8h_a0a084c7f8049985090b5a6f14b8dff7e}\label{help__functions_8h_a0a084c7f8049985090b5a6f14b8dff7e}} 
+\index{help\_functions.h@{help\_functions.h}!adr1@{adr1}}
+\index{adr1@{adr1}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{adr1}{adr1}}
+{\footnotesize\ttfamily uint8\+\_\+t adr1}
+
+\mbox{\Hypertarget{help__functions_8h_a29d5cd0feaf009e702943f8224cd9fbd}\label{help__functions_8h_a29d5cd0feaf009e702943f8224cd9fbd}} 
+\index{help\_functions.h@{help\_functions.h}!adr2@{adr2}}
+\index{adr2@{adr2}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{adr2}{adr2}}
+{\footnotesize\ttfamily uint8\+\_\+t adr2}
+
+\mbox{\Hypertarget{help__functions_8h_ab737b9992427f6e30af5b3846d48b66d}\label{help__functions_8h_ab737b9992427f6e30af5b3846d48b66d}} 
+\index{help\_functions.h@{help\_functions.h}!crc@{crc}}
+\index{crc@{crc}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{crc}{crc}}
+{\footnotesize\ttfamily uint8\+\_\+t crc}
+
+\mbox{\Hypertarget{help__functions_8h_a325819a8e492ac69542e8b31705af6e9}\label{help__functions_8h_a325819a8e492ac69542e8b31705af6e9}} 
+\index{help\_functions.h@{help\_functions.h}!data@{data}}
+\index{data@{data}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t data}
+
+\mbox{\Hypertarget{help__functions_8h_a23191936922cf0740cd72391a1f43041}\label{help__functions_8h_a23191936922cf0740cd72391a1f43041}} 
+\index{help\_functions.h@{help\_functions.h}!dataData@{dataData}}
+\index{dataData@{dataData}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{dataData}{dataData}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+Data\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{help__functions_8h_af13e629a2f79d14821c7b9246ef99e9f}\label{help__functions_8h_af13e629a2f79d14821c7b9246ef99e9f}} 
+\index{help\_functions.h@{help\_functions.h}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+Size}
+
+\mbox{\Hypertarget{help__functions_8h_a6b693652a1f907303f32adf685c21db9}\label{help__functions_8h_a6b693652a1f907303f32adf685c21db9}} 
+\index{help\_functions.h@{help\_functions.h}!readed@{readed}}
+\index{readed@{readed}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{readed}{readed}}
+{\footnotesize\ttfamily \+\_\+\+Bool readed}
+
+\mbox{\Hypertarget{help__functions_8h_ad3d251360187c7a3da1b8e5b482b8e9d}\label{help__functions_8h_ad3d251360187c7a3da1b8e5b482b8e9d}} 
+\index{help\_functions.h@{help\_functions.h}!startB@{startB}}
+\index{startB@{startB}!help\_functions.h@{help\_functions.h}}
+\doxysubsubsection{\texorpdfstring{startB}{startB}}
+{\footnotesize\ttfamily uint8\+\_\+t startB}
+

@@ -1,0 +1,319 @@
+\hypertarget{lpsci__polling_8c}{}\doxysection{C\+:/\+Users/mirot/\+Documents/\+M\+C\+U\+Xpresso\+I\+D\+E\+\_\+11.0.1\+\_\+2563/workspace/frdmkl25z\+\_\+driver\+\_\+examples\+\_\+lpsci\+\_\+polling/source/lpsci\+\_\+polling.c File Reference}
+\label{lpsci__polling_8c}\index{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/lpsci\_polling.c@{C:/Users/mirot/Documents/MCUXpressoIDE\_11.0.1\_2563/workspace/frdmkl25z\_driver\_examples\_lpsci\_polling/source/lpsci\_polling.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+device\+\_\+registers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+lpsci.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}clock\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pin\+\_\+mux.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lpsci__polling_8c_a748e69d615c835d8d9ae5f98af570532}{D\+E\+M\+O\+\_\+\+L\+P\+S\+CI}}~U\+A\+R\+T0
+\item 
+\#define \mbox{\hyperlink{lpsci__polling_8c_a0b3afd1134e408b124f3eda7abae56c4}{D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+C\+L\+K\+S\+RC}}~k\+C\+L\+O\+C\+K\+\_\+\+Core\+Sys\+Clk
+\item 
+\#define \mbox{\hyperlink{lpsci__polling_8c_a17ab487c275d39174ea8931961bdbb5d}{D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+C\+L\+K\+\_\+\+F\+R\+EQ}}~C\+L\+O\+C\+K\+\_\+\+Get\+Freq(k\+C\+L\+O\+C\+K\+\_\+\+Core\+Sys\+Clk)
+\item 
+\#define \mbox{\hyperlink{lpsci__polling_8c_ad76d1750a6cdeebd506bfcd6752554d2}{ON}}~0x01
+\item 
+\#define \mbox{\hyperlink{lpsci__polling_8c_a29e413f6725b2ba32d165ffaa35b01e5}{O\+FF}}~0x00
+\item 
+\#define \mbox{\hyperlink{lpsci__polling_8c_a1965eaca47dbf3f87acdafc2208f04eb}{UP}}~0x01
+\item 
+\#define \mbox{\hyperlink{lpsci__polling_8c_a4193cd1c8c2e6ebd0e056fa2364a663f}{D\+O\+WN}}~0x02
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_ae4957ea7c20060dce20f990a9b8ecbcb}{delay}} (int milli\+\_\+seconds)
+\item 
+unsigned char \mbox{\hyperlink{lpsci__polling_8c_ac8a19719c0e9993dd505a797e2f750fb}{dallas\+\_\+crc8}} (const unsigned char $\ast$\mbox{\hyperlink{lpsci__polling_8c_a325819a8e492ac69542e8b31705af6e9}{data}}, const unsigned int size)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_a136c4f43a14a2dbf7bf66ef1e7b4c675}{read\+Msg}} (void)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_affd6460c58301cd0a5e45abbfd1ad04b}{print\+Data}} (void)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_ab273ffa1b99365c5fd65d9f3a63248a6}{close\+Doors}} (void)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_a1a9607c416e5e77249f2bb5e1b31ea8b}{open\+Doors}} (void)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_a723bd559f244affc5fd973a9402c4924}{get\+Current\+Floor}} (uint8\+\_\+t direction)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_ac92ebc93dd2ccfdff13beb82a4a9ef19}{get\+Next\+Floor\+L\+ED}} (void)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_a1cd2b5da6b72f6aeaceb517dade11ab9}{L\+ED}} (uint8\+\_\+t led, uint8\+\_\+t on\+Off)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_ac1d276b5f0f6871af89be8ddf312cb37}{start\+Moving}} (void)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_aacf6bf8e121fea8b0a92d7197b73fe27}{stop}} (void)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_af59c62ac913a7e9a3ead5f189520972b}{def\+State}} (void)
+\item 
+void \mbox{\hyperlink{lpsci__polling_8c_a3d67752672de1fee557a36318e762fa2}{choose\+Action}} (void)
+\item 
+int \mbox{\hyperlink{lpsci__polling_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_a325819a8e492ac69542e8b31705af6e9}{data}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_ad3d251360187c7a3da1b8e5b482b8e9d}{startB}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_a0a084c7f8049985090b5a6f14b8dff7e}{adr1}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_a29d5cd0feaf009e702943f8224cd9fbd}{adr2}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_af13e629a2f79d14821c7b9246ef99e9f}{data\+Size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_ab737b9992427f6e30af5b3846d48b66d}{crc}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_a23191936922cf0740cd72391a1f43041}{data\+Data}} \mbox{[}10\mbox{]}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{lpsci__polling_8c_a6b693652a1f907303f32adf685c21db9}{readed}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{lpsci__polling_8c_a627c93e32e4c770eb01834c59e466a9a}{is\+Moving}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{lpsci__polling_8c_ab48a2239b01b69915af065f1eca22a0f}{opened}}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{lpsci__polling_8c_a3c250fb2c6792afafd0e8cb3880d672d}{up}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_ae4d6b68a29058b69e6b7fec3e264e0d1}{last\+Limit\+Switch}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_a92ede5611b7f4ff11d8f8f66fc5fe059}{new\+Limit\+Switch}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_af769d61a2f95d35a60f9da9e95632da9}{current\+Floor}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{lpsci__polling_8c_a0a42ab4958acd8c38fe037f5d0682387}{next\+Floor\+Led}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lpsci__polling_8c_a748e69d615c835d8d9ae5f98af570532}\label{lpsci__polling_8c_a748e69d615c835d8d9ae5f98af570532}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!DEMO\_LPSCI@{DEMO\_LPSCI}}
+\index{DEMO\_LPSCI@{DEMO\_LPSCI}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{DEMO\_LPSCI}{DEMO\_LPSCI}}
+{\footnotesize\ttfamily \#define D\+E\+M\+O\+\_\+\+L\+P\+S\+CI~U\+A\+R\+T0}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a17ab487c275d39174ea8931961bdbb5d}\label{lpsci__polling_8c_a17ab487c275d39174ea8931961bdbb5d}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!DEMO\_LPSCI\_CLK\_FREQ@{DEMO\_LPSCI\_CLK\_FREQ}}
+\index{DEMO\_LPSCI\_CLK\_FREQ@{DEMO\_LPSCI\_CLK\_FREQ}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{DEMO\_LPSCI\_CLK\_FREQ}{DEMO\_LPSCI\_CLK\_FREQ}}
+{\footnotesize\ttfamily \#define D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+C\+L\+K\+\_\+\+F\+R\+EQ~C\+L\+O\+C\+K\+\_\+\+Get\+Freq(k\+C\+L\+O\+C\+K\+\_\+\+Core\+Sys\+Clk)}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a0b3afd1134e408b124f3eda7abae56c4}\label{lpsci__polling_8c_a0b3afd1134e408b124f3eda7abae56c4}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!DEMO\_LPSCI\_CLKSRC@{DEMO\_LPSCI\_CLKSRC}}
+\index{DEMO\_LPSCI\_CLKSRC@{DEMO\_LPSCI\_CLKSRC}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{DEMO\_LPSCI\_CLKSRC}{DEMO\_LPSCI\_CLKSRC}}
+{\footnotesize\ttfamily \#define D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+C\+L\+K\+S\+RC~k\+C\+L\+O\+C\+K\+\_\+\+Core\+Sys\+Clk}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a4193cd1c8c2e6ebd0e056fa2364a663f}\label{lpsci__polling_8c_a4193cd1c8c2e6ebd0e056fa2364a663f}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!DOWN@{DOWN}}
+\index{DOWN@{DOWN}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{DOWN}{DOWN}}
+{\footnotesize\ttfamily \#define D\+O\+WN~0x02}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a29e413f6725b2ba32d165ffaa35b01e5}\label{lpsci__polling_8c_a29e413f6725b2ba32d165ffaa35b01e5}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!OFF@{OFF}}
+\index{OFF@{OFF}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{OFF}{OFF}}
+{\footnotesize\ttfamily \#define O\+FF~0x00}
+
+\mbox{\Hypertarget{lpsci__polling_8c_ad76d1750a6cdeebd506bfcd6752554d2}\label{lpsci__polling_8c_ad76d1750a6cdeebd506bfcd6752554d2}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!ON@{ON}}
+\index{ON@{ON}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{ON}{ON}}
+{\footnotesize\ttfamily \#define ON~0x01}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a1965eaca47dbf3f87acdafc2208f04eb}\label{lpsci__polling_8c_a1965eaca47dbf3f87acdafc2208f04eb}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!UP@{UP}}
+\index{UP@{UP}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{UP}{UP}}
+{\footnotesize\ttfamily \#define UP~0x01}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lpsci__polling_8c_a3d67752672de1fee557a36318e762fa2}\label{lpsci__polling_8c_a3d67752672de1fee557a36318e762fa2}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!chooseAction@{chooseAction}}
+\index{chooseAction@{chooseAction}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{chooseAction()}{chooseAction()}}
+{\footnotesize\ttfamily void choose\+Action (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_ab273ffa1b99365c5fd65d9f3a63248a6}\label{lpsci__polling_8c_ab273ffa1b99365c5fd65d9f3a63248a6}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!closeDoors@{closeDoors}}
+\index{closeDoors@{closeDoors}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{closeDoors()}{closeDoors()}}
+{\footnotesize\ttfamily void close\+Doors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_ac8a19719c0e9993dd505a797e2f750fb}\label{lpsci__polling_8c_ac8a19719c0e9993dd505a797e2f750fb}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!dallas\_crc8@{dallas\_crc8}}
+\index{dallas\_crc8@{dallas\_crc8}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{dallas\_crc8()}{dallas\_crc8()}}
+{\footnotesize\ttfamily unsigned char dallas\+\_\+crc8 (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{const unsigned int}]{size }\end{DoxyParamCaption})}
+
+Metóda vracajúca C\+RC 8 maxim parametre\+: data, velkost dat \mbox{\Hypertarget{lpsci__polling_8c_af59c62ac913a7e9a3ead5f189520972b}\label{lpsci__polling_8c_af59c62ac913a7e9a3ead5f189520972b}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!defState@{defState}}
+\index{defState@{defState}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{defState()}{defState()}}
+{\footnotesize\ttfamily void def\+State (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_ae4957ea7c20060dce20f990a9b8ecbcb}\label{lpsci__polling_8c_ae4957ea7c20060dce20f990a9b8ecbcb}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!delay@{delay}}
+\index{delay@{delay}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{int}]{milli\+\_\+seconds }\end{DoxyParamCaption})}
+
+Metóda delay z internetu Storing start time
+
+looping till required time is not achieved\mbox{\Hypertarget{lpsci__polling_8c_a723bd559f244affc5fd973a9402c4924}\label{lpsci__polling_8c_a723bd559f244affc5fd973a9402c4924}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!getCurrentFloor@{getCurrentFloor}}
+\index{getCurrentFloor@{getCurrentFloor}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{getCurrentFloor()}{getCurrentFloor()}}
+{\footnotesize\ttfamily void get\+Current\+Floor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{direction }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_ac92ebc93dd2ccfdff13beb82a4a9ef19}\label{lpsci__polling_8c_ac92ebc93dd2ccfdff13beb82a4a9ef19}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!getNextFloorLED@{getNextFloorLED}}
+\index{getNextFloorLED@{getNextFloorLED}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{getNextFloorLED()}{getNextFloorLED()}}
+{\footnotesize\ttfamily void get\+Next\+Floor\+L\+ED (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a1cd2b5da6b72f6aeaceb517dade11ab9}\label{lpsci__polling_8c_a1cd2b5da6b72f6aeaceb517dade11ab9}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!LED@{LED}}
+\index{LED@{LED}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{LED()}{LED()}}
+{\footnotesize\ttfamily void L\+ED (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{led,  }\item[{uint8\+\_\+t}]{on\+Off }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{lpsci__polling_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!main@{main}}
+\index{main@{main}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a1a9607c416e5e77249f2bb5e1b31ea8b}\label{lpsci__polling_8c_a1a9607c416e5e77249f2bb5e1b31ea8b}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!openDoors@{openDoors}}
+\index{openDoors@{openDoors}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{openDoors()}{openDoors()}}
+{\footnotesize\ttfamily void open\+Doors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_affd6460c58301cd0a5e45abbfd1ad04b}\label{lpsci__polling_8c_affd6460c58301cd0a5e45abbfd1ad04b}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!printData@{printData}}
+\index{printData@{printData}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{printData()}{printData()}}
+{\footnotesize\ttfamily void print\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a136c4f43a14a2dbf7bf66ef1e7b4c675}\label{lpsci__polling_8c_a136c4f43a14a2dbf7bf66ef1e7b4c675}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!readMsg@{readMsg}}
+\index{readMsg@{readMsg}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{readMsg()}{readMsg()}}
+{\footnotesize\ttfamily void read\+Msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+get last limit switch
+
+send A\+CK\mbox{\Hypertarget{lpsci__polling_8c_ac1d276b5f0f6871af89be8ddf312cb37}\label{lpsci__polling_8c_ac1d276b5f0f6871af89be8ddf312cb37}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!startMoving@{startMoving}}
+\index{startMoving@{startMoving}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{startMoving()}{startMoving()}}
+{\footnotesize\ttfamily void start\+Moving (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lpsci__polling_8c_aacf6bf8e121fea8b0a92d7197b73fe27}\label{lpsci__polling_8c_aacf6bf8e121fea8b0a92d7197b73fe27}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!stop@{stop}}
+\index{stop@{stop}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{lpsci__polling_8c_a0a084c7f8049985090b5a6f14b8dff7e}\label{lpsci__polling_8c_a0a084c7f8049985090b5a6f14b8dff7e}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!adr1@{adr1}}
+\index{adr1@{adr1}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{adr1}{adr1}}
+{\footnotesize\ttfamily uint8\+\_\+t adr1}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a29d5cd0feaf009e702943f8224cd9fbd}\label{lpsci__polling_8c_a29d5cd0feaf009e702943f8224cd9fbd}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!adr2@{adr2}}
+\index{adr2@{adr2}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{adr2}{adr2}}
+{\footnotesize\ttfamily uint8\+\_\+t adr2}
+
+\mbox{\Hypertarget{lpsci__polling_8c_ab737b9992427f6e30af5b3846d48b66d}\label{lpsci__polling_8c_ab737b9992427f6e30af5b3846d48b66d}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!crc@{crc}}
+\index{crc@{crc}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{crc}{crc}}
+{\footnotesize\ttfamily uint8\+\_\+t crc}
+
+\mbox{\Hypertarget{lpsci__polling_8c_af769d61a2f95d35a60f9da9e95632da9}\label{lpsci__polling_8c_af769d61a2f95d35a60f9da9e95632da9}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!currentFloor@{currentFloor}}
+\index{currentFloor@{currentFloor}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{currentFloor}{currentFloor}}
+{\footnotesize\ttfamily uint8\+\_\+t current\+Floor}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a325819a8e492ac69542e8b31705af6e9}\label{lpsci__polling_8c_a325819a8e492ac69542e8b31705af6e9}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!data@{data}}
+\index{data@{data}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t data}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a23191936922cf0740cd72391a1f43041}\label{lpsci__polling_8c_a23191936922cf0740cd72391a1f43041}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!dataData@{dataData}}
+\index{dataData@{dataData}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{dataData}{dataData}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+Data\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{lpsci__polling_8c_af13e629a2f79d14821c7b9246ef99e9f}\label{lpsci__polling_8c_af13e629a2f79d14821c7b9246ef99e9f}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+Size}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a627c93e32e4c770eb01834c59e466a9a}\label{lpsci__polling_8c_a627c93e32e4c770eb01834c59e466a9a}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!isMoving@{isMoving}}
+\index{isMoving@{isMoving}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{isMoving}{isMoving}}
+{\footnotesize\ttfamily \+\_\+\+Bool is\+Moving}
+
+\mbox{\Hypertarget{lpsci__polling_8c_ae4d6b68a29058b69e6b7fec3e264e0d1}\label{lpsci__polling_8c_ae4d6b68a29058b69e6b7fec3e264e0d1}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!lastLimitSwitch@{lastLimitSwitch}}
+\index{lastLimitSwitch@{lastLimitSwitch}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{lastLimitSwitch}{lastLimitSwitch}}
+{\footnotesize\ttfamily uint8\+\_\+t last\+Limit\+Switch}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a92ede5611b7f4ff11d8f8f66fc5fe059}\label{lpsci__polling_8c_a92ede5611b7f4ff11d8f8f66fc5fe059}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!newLimitSwitch@{newLimitSwitch}}
+\index{newLimitSwitch@{newLimitSwitch}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{newLimitSwitch}{newLimitSwitch}}
+{\footnotesize\ttfamily uint8\+\_\+t new\+Limit\+Switch}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a0a42ab4958acd8c38fe037f5d0682387}\label{lpsci__polling_8c_a0a42ab4958acd8c38fe037f5d0682387}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!nextFloorLed@{nextFloorLed}}
+\index{nextFloorLed@{nextFloorLed}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{nextFloorLed}{nextFloorLed}}
+{\footnotesize\ttfamily uint8\+\_\+t next\+Floor\+Led}
+
+\mbox{\Hypertarget{lpsci__polling_8c_ab48a2239b01b69915af065f1eca22a0f}\label{lpsci__polling_8c_ab48a2239b01b69915af065f1eca22a0f}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!opened@{opened}}
+\index{opened@{opened}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{opened}{opened}}
+{\footnotesize\ttfamily \+\_\+\+Bool opened}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a6b693652a1f907303f32adf685c21db9}\label{lpsci__polling_8c_a6b693652a1f907303f32adf685c21db9}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!readed@{readed}}
+\index{readed@{readed}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{readed}{readed}}
+{\footnotesize\ttfamily \+\_\+\+Bool readed}
+
+\mbox{\Hypertarget{lpsci__polling_8c_ad3d251360187c7a3da1b8e5b482b8e9d}\label{lpsci__polling_8c_ad3d251360187c7a3da1b8e5b482b8e9d}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!startB@{startB}}
+\index{startB@{startB}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{startB}{startB}}
+{\footnotesize\ttfamily uint8\+\_\+t startB}
+
+\mbox{\Hypertarget{lpsci__polling_8c_a3c250fb2c6792afafd0e8cb3880d672d}\label{lpsci__polling_8c_a3c250fb2c6792afafd0e8cb3880d672d}} 
+\index{lpsci\_polling.c@{lpsci\_polling.c}!up@{up}}
+\index{up@{up}!lpsci\_polling.c@{lpsci\_polling.c}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily \+\_\+\+Bool up}
+
